@@ -1,0 +1,144 @@
+<!-- From https://developers.allods-nova.eu/
+     translated in english by Сорок два
+	 JS part by Сорок два
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>User Banner Generator</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<script src="./js/jquery-1.11.1.js"></script>
+	<script src="./js/image.js"></script>
+	<style type="text/css">
+		@font-face {
+		  font-family: Allods;
+		  src: url(./fonts/allods-webfont.ttf);
+		}
+		@font-face {
+		  font-family: HelveticaRegular;
+		  src: url(./fonts/HelveticaRegular.ttf);
+		}
+		body {
+			margin:0;
+			padding:0;
+			font-weight: normal;
+			font-style: normal;
+			color: #555;
+			background:#0e0e0e url(./images/bg.png) no-repeat center top;background-attachment:fixed;
+		}
+		.logo__wrapper {
+			position: relative;
+			margin: 0 auto;
+			width: 505px;
+			height: 330px;
+			top: -20px;
+		}
+
+		.logo{
+			background: transparent url(./images/logo.png) no-repeat 50% 50%;
+			font: 0/0 a;
+			color: transparent;
+			text-shadow: none;
+			border: 0;
+			height: 330px;
+			width: 505px;
+			display: block;
+		}
+
+		.article {
+			width:613px;
+			margin-left: auto;
+			margin-right: auto;
+			background:url("./images/bg_block.jpg");
+			border:1px solid #614b00;
+			padding:10px 10px;
+		}
+		.content_inner{
+			width:635px;
+			margin-left: auto;
+			margin-right: auto;
+			background:url("./images/bg_content.png");
+			padding:10px 10px;
+		}
+		input[type=text] {padding: 5px;    border: 1px solid #cecece;    margin: 5px 0;    font-size: 15px;}
+		button {
+			font color: #fff;
+			float: left;
+			position: relative;
+			z-index: 5;
+			margin-right: 9px;
+			padding: 1px 9px 2px 14px;
+			background: url(images/but.gif) no-repeat 0 0;
+		}
+		.container {    width: 720px;    margin: auto;    background: #f7f7f7;    padding: 25px;}
+		.footer {width: 720px;    margin: auto;    background: #ccc;  padding: 25px;}
+		</style>
+	</head>
+	
+	<body>
+		<div class="logo__wrapper">
+			<a href="/" class="logo"></a>
+		</div>
+	</span>
+	</div>
+	<div class="content_inner">
+		<h1>Userbar creator</h1>
+	<div class="article">
+	<table>
+	<thead></thead>
+	<tbody>	
+		<form onsubmit="return false"  id="createForm" >	
+			<tr><td>Enter character name</td><td><input type="text" name="name" id="namecrt"></td></tr>
+			<tr><td>Enter character level</td><td><input type="text" name="lvl" id="lvlcrt"></td></tr>
+			<tr><td>Enter server name</td><td><input type="text" name="server" id="shardcrt"></td></tr>
+			<tr><td>Rating (GS)</td><td><input type="text" name="gs" id="gscrt"></td></tr>
+			<tr><td>Enter guild</td><td><input type="text" name="guild" id="guildcrt"></td></tr>
+			<tr>
+				<td>Choose a race:</td>
+				<td>
+					<select name="race_path" id="race_path">
+						<option value="race/hadagan.png" >Hadagan</option>
+						<option value="race/Elf.png" >Elf</option>
+						<option value="race/Gibberling.png" >Gibberling</option>
+						<option value="race/Kania.png" >Kania</option>
+						<option value="race/Orc.png" >Orc</option>
+						<option value="race/Undead.png" >Zem</option>
+					</select>
+				</td>
+			</tr>
+			<tr><td>
+				Select a faction:</td><td><select name="fac_path" id="fac_path">
+				<option value="faction/Empire.png" >Empire</option>
+				<option value="faction/League.png" >League</option>
+				</select>
+				</td></tr>
+
+				<tr><td>	
+				Choose Class:</td><td><select name="class_path" id="class_path" >
+				<option value="class/Bard.png">Bard</option>	
+				<option value="class/Necromancer.png">Necromancer</option>
+				<option value="class/Druid.png">Druid</option>
+				<option value="class/Mage.png">Mage</option>
+				<option value="class/Paladin.png">Paladin</option>
+				<option value="class/Priest.png">Priest</option>
+				<option value="class/Psionic.png">Psionic</option>
+				<option value="class/Stalker.png">Stalker</option>
+				<option value="class/Warrior.png">Warrior</option>
+		</select></td></tr>
+				<tr><td><button name="enter" onclick="createImage()"><font color="white">Generate User Banner</font></button>
+				</td></tr>
+			</form>
+		</tbody>
+		</table>
+		
+		<canvas id="userbar" width="470" height="80" style="border:1px solid #000000;"></canvas>
+		<br><br>
+		* Just save the picture after the rendering !
+		</div>
+	</body>
+
+</html>
